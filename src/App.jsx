@@ -6,10 +6,21 @@ import Notes from "./notes";
 
 
 
+
 function App(){
+
+
+    const [counter, counterCal] = React.useState(0);
+    function increse(){
+        counterCal(counter+1);
+    }
+
+
+
     return (
       <div>
         <Header />
+        <h1 onClick={increse} >{counter}</h1>
         {
             Notes.map(item=>{
                 return (
